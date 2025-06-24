@@ -8,14 +8,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Bar Parent</name>
-	<distributionManagement>
-		<relocation>
-			<groupId>foo</groupId>
-		</relocation>
-	</distributionManagement>
 
 	<modules>
-        <module>bar.example1</module>
-        <module>bar.example2</module>
+		<module>bar.example1</module>
+		<module>bar.example2</module>
 	</modules>
 </project>
