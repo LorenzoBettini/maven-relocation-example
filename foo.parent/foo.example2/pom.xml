@@ -8,17 +8,21 @@
 		<artifactId>foo.parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>foo.example1</artifactId>
+	<artifactId>foo.example2</artifactId>
 
-	<name>foo.example1</name>
-	<description>A simple foo.example1.</description>
+	<name>foo.example2</name>
+	<description>A simple foo.example2.</description>
 
 	<dependencies>
+		<dependency>
+			<groupId>foo</groupId>
+			<artifactId>foo.example1</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13.2</version>
 		</dependency>
 	</dependencies>
-
 </project>
