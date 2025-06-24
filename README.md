@@ -38,6 +38,10 @@ There are two additional projects that demonstrate consumption of the relocated 
 - **Relocation**: The `bar` artifacts are empty and only exist to redirect Maven builds to the `foo` artifacts using relocation.
 - **Dependency**: `foo.example2` depends on `foo.example1`, so using the relocated `bar:foo.example2` will also bring in `foo:foo.example1` due to transitive dependencies.
 
+## From Eclipse
+
+If you import all the projects, the relocation works automatically, without installing anything with Maven.
+
 ## How to Recreate the Examples Locally
 
 You can try out the relocation setup locally by following these steps:
