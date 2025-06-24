@@ -13,4 +13,9 @@
 			<groupId>foo</groupId>
 		</relocation>
 	</distributionManagement>
+
+	<modules>
+        <module>bar.example1</module>
+        <module>bar.example2</module>
+	</modules>
 </project>
