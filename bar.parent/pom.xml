@@ -12,5 +12,6 @@
 	<modules>
 		<module>bar.example1</module>
 		<module>bar.example2</module>
+		<module>bar-maven-plugin</module>
 	</modules>
 </project>

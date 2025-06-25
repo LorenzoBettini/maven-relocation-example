@@ -32,6 +32,22 @@
 	</dependencies>
 
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>bar</groupId>
+				<artifactId>foo-maven-plugin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>touch</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>touch</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
 			<plugins>
