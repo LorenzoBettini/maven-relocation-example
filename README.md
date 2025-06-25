@@ -70,3 +70,10 @@ You can try out the relocation setup locally by following these steps:
    cd ../barclient1
    mvn clean package
    ```
+
+During the build, Maven will issue warnings about relocated artifacts, e.g.,
+
+```sh
+Warning:  The artifact bar:foo-maven-plugin:jar:0.0.1-SNAPSHOT has been relocated to foo:foo-maven-plugin:jar:0.0.1-SNAPSHOT
+Warning:  The artifact bar:foo.example2:jar:0.0.1-SNAPSHOT has been relocated to foo:foo.example2:jar:0.0.1-SNAPSHOT
+```
