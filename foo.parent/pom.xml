@@ -17,6 +17,7 @@
 	<modules>
 		<module>foo.example1</module>
 		<module>foo.example2</module>
+		<module>foo-maven-plugin</module>
 	</modules>
 
 	<build>
