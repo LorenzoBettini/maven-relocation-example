@@ -10,9 +10,10 @@ The repository is organized into several multi-module Maven projects:
 
 This is the main set of Maven artifacts (the "real" ones):
 
-- **foo.example1**  
-- **foo.example2**  
+- **foo.example1**
+- **foo.example2**
   - _Note: `foo.example2` depends on `foo.example1`._
+- **foo-maven-plugin**  
 
 These modules are the actual implementations and are published under the groupId `foo`.
 
@@ -22,6 +23,7 @@ This mirrors the structure of `foo.parent`, but all modules here are set up sole
 
 - **bar.example1** (relocates to `foo.example1`)
 - **bar.example2** (relocates to `foo.example2`)
+- **bar-maven-plugin** (relocates to `foo-maven-plugin`)
 
 Both have the same artifactIds as their `foo` counterparts, but their groupId is `bar`. Their POMs use the `<distributionManagement><relocation>` mechanism to point to the new `foo` coordinates.
 
@@ -30,17 +32,19 @@ Both have the same artifactIds as their `foo` counterparts, but their groupId is
 There are two additional projects that demonstrate consumption of the relocated artifacts:
 
 - **barclient1** depends on `bar:foo.example1` (which is relocated to `foo:foo.example1`)
-- **barclient2** depends on `bar:foo.example2` (which is relocated to `foo:foo.example2`)
+- **barclient2** depends on `bar:foo.example2` (which is relocated to `foo:foo.example2`) and uses `bar:foo-maven-plugin` (which is relocated to `foo:foo-maven-plugin`)
   - _Since `foo:foo.example2` depends on `foo:foo.example1`, this shows how transitive relocation works._
 
 ## Key Points
 
 - **Relocation**: The `bar` artifacts are empty and only exist to redirect Maven builds to the `foo` artifacts using relocation.
 - **Dependency**: `foo.example2` depends on `foo.example1`, so using the relocated `bar:foo.example2` will also bring in `foo:foo.example1` due to transitive dependencies.
+Relocation for plugins works as well.
 
 ## From Eclipse
 
 If you import all the projects, the relocation works automatically, without installing anything with Maven.
+The Maven plugin will issue a warning in the POMs unless you install it.
 
 ## How to Recreate the Examples Locally
 
