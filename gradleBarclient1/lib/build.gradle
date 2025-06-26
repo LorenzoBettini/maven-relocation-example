@@ -26,7 +26,7 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation libs.guava
 
-    implementation "foo:foo.example1:0.0.1-SNAPSHOT"
+    implementation "bar:foo.example1:0.0.1-SNAPSHOT"
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
