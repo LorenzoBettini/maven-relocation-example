@@ -67,8 +67,14 @@ You can try out the relocation setup locally by following these steps:
    cd ../barclient1
    mvn clean package
 
-   cd ../barclient1
+   cd ../barclient2
    mvn clean package
+
+   cd ../gradleBarclient1
+   ./gradlew clean build
+
+   cd ../gradleBarclient2
+   ./gradlew clean build
    ```
 
 During the build, Maven will issue warnings about relocated artifacts, e.g.,

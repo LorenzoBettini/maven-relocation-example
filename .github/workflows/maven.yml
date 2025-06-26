@@ -42,3 +42,11 @@ jobs:
       run: mvn --file barclient1/pom.xml test
     - name: Test client2 (uses relocated packages)
       run: mvn --file barclient2/pom.xml test
+    - name: Build gradleBarclient1
+      run: |
+        cd gradleBarclient1
+        ./gradlew build
+    - name: Build gradleBarclient2
+      run: |
+        cd gradleBarclient2
+        ./gradlew build
