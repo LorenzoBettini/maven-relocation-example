@@ -3,13 +3,13 @@
  */
 package org.example;
 
-import org.foo.example1.MyClass1;
+import org.foo.example2.MyClass2;
 
 public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
-    public String useMyClass1() {
-		return new MyClass1().getMessage();
+    public String useMyClass2() {
+		return new MyClass2().getMessage();
 	}
 }
