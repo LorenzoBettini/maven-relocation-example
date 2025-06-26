@@ -34,6 +34,7 @@ There are two additional projects that demonstrate consumption of the relocated 
 - **barclient1** depends on `bar:foo.example1` (which is relocated to `foo:foo.example1`)
 - **barclient2** depends on `bar:foo.example2` (which is relocated to `foo:foo.example2`) and uses `bar:foo-maven-plugin` (which is relocated to `foo:foo-maven-plugin`)
   - _Since `foo:foo.example2` depends on `foo:foo.example1`, this shows how transitive relocation works._
+- **gradleBarclient1** and **gradleBarclient2** do basically the same as Gradle projects.
 
 ## Key Points
 
